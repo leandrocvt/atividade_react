@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import Conteudo from './components/Conteudo';
+import Header from './components/Header';
+import Produto from './components/Produto';
+import tenis from './assets/img/tenis1.png'
+import tenis2 from './assets/img/tenis2.jpg'
+import corta_vento from './assets/img/corta_vento.jpg'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Conteudo />
+      <div className="container_produtos">
+        <Produto nome='DUNK HIGH Vintage' foto={tenis} fabricante='Nike' preco='250,00' />
+        <Produto nome='AIR ADJUST FORCE SP / AMBUSH' foto={tenis2} fabricante='Nike' preco='850,00' />
+        <Produto nome='Corta Vento Preto' foto={corta_vento} fabricante='Nike' preco='300,00' />
+      </div>
     </div>
   );
 }
